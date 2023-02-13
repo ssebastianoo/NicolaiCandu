@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/assets/Ubuntu-R.ttf");
+}
+body {
+  background-color: rgb(29, 28, 28);
+  color: white;
+  font-family: "Ubuntu";
+}/*# sourceMappingURL=style.css.map */
