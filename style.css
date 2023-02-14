@@ -8,8 +8,18 @@ body {
   padding: 0;
 }
 
+a {
+  color: rgb(236, 255, 150);
+  text-decoration: underline;
+}
+
+@keyframes rainbow-animation {
+  to {
+    background-position: 200vw;
+  }
+}
 body {
-  background-color: rgb(29, 28, 28);
+  background: linear-gradient(to bottom, rgb(20, 20, 20), rgb(0, 0, 0));
   color: white;
   font-family: "Ubuntu";
   display: flex;
@@ -17,16 +27,46 @@ body {
   justify-content: center;
 }
 body .container {
+  width: calc(100% - 40px);
   max-width: 600px;
   margin: 20px;
 }
 body .container .title {
-  margin-top: 0;
+  position: fixed;
+  background-color: rgba(16, 16, 16, 0.9725490196);
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+body .container .title h1 {
+  padding: 20px;
+  margin: 0;
+  background-image: linear-gradient(to right, rgb(236, 188, 99), rgb(247, 247, 120), rgb(180, 252, 122), rgb(236, 188, 99));
+  animation: rainbow-animation 20s linear infinite;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body .container .first {
+  margin-top: 55px;
+}
+body .container .pics-parent {
+  display: flex;
+  justify-content: center;
 }
 body .container .pics {
+  overflow: auto;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
   gap: 10px;
+}
+body .container .pics img {
+  height: 200px;
+  width: auto;
+}
+
+@media (max-width: 263.5px) {
+  body .container .first {
+    margin-top: 95px;
+  }
 }/*# sourceMappingURL=style.css.map */
