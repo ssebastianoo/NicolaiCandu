@@ -3,6 +3,11 @@
   src: url("/assets/Ubuntu-R.ttf");
 }
 
+@font-face {
+  font-family: "LibreBodoni";
+  src: url("/assets/LibreBodoni-Regular.ttf");
+}
+
 html,
 body {
   margin: 0;
@@ -21,12 +26,18 @@ a {
 }
 
 body {
-  background: linear-gradient(to bottom, rgb(20, 20, 20), rgb(0, 0, 0));
+  background: linear-gradient(to bottom, rgb(43, 40, 40), rgb(0, 0, 0));
+
   color: white;
-  font-family: "Ubuntu";
+  font-family: "LibreBodoni";
   display: flex;
   align-items: center;
   justify-content: center;
+
+  h1,
+  h2 {
+    margin: 20px;
+  }
 
   .container {
     width: calc(100% - 40px);
@@ -34,15 +45,8 @@ body {
     margin: 20px;
 
     .title {
-      position: fixed;
-      background-color: #101010f8;
-      width: 100%;
-      top: 0;
-      left: 0;
-
       h1 {
-        padding: 20px;
-        margin: 0;
+        text-align: center;
         background-image: linear-gradient(
           to right,
           rgb(236, 188, 99),
@@ -56,8 +60,31 @@ body {
       }
     }
 
-    .first {
-      margin-top: 55px;
+    .intro {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+
+      .text {
+        display: flex;
+
+        p {
+          margin: 0;
+          width: 50%;
+        }
+
+        &:nth-child(2) {
+          justify-content: flex-end;
+
+          p {
+            text-align: right;
+          }
+        }
+      }
+    }
+
+    .goblin {
+      text-align: center;
     }
 
     .pics-parent {
@@ -84,6 +111,18 @@ body {
     .container {
       .first {
         margin-top: 95px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    .container {
+      .intro {
+        .text p {
+          width: 80%;
+        }
       }
     }
   }
