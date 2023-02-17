@@ -1,95 +1,125 @@
 @font-face {
-  font-family: "Ubuntu";
-  src: url("/assets/Ubuntu-R.ttf");
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/SFProDisplay-Regular.ttf") format("truetype");
 }
 @font-face {
-  font-family: "LibreBodoni";
-  src: url("/assets/LibreBodoni-Regular.ttf");
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/assets/fonts/SFProDisplay-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/assets/fonts/SFProDisplay-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/assets/fonts/SFProDisplay-Semibold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/SFProDisplay-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 800;
+  src: url("/assets/fonts/SFProDisplay-Heavy.ttf") format("truetype");
 }
 html,
 body {
   margin: 0;
-  padding: 0;
+}
+
+body {
+  font-family: "SF Pro Display", sans-serif;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.08349;
+  letter-spacing: -0.002em;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.16667;
+  letter-spacing: 0.009em;
 }
 
 a {
-  color: rgb(236, 255, 150);
-  text-decoration: underline;
+  color: #2997ff;
+  text-decoration: none;
 }
 
-@keyframes rainbow-animation {
-  to {
-    background-position: 200vw;
-  }
-}
-body {
-  background: linear-gradient(to bottom, rgb(43, 40, 40), rgb(0, 0, 0));
-  color: white;
-  font-family: "LibreBodoni";
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-body h1,
-body h2 {
-  margin: 20px;
-}
-body .container {
+nav {
   width: calc(100% - 40px);
-  max-width: 600px;
-  margin: 20px;
-}
-body .container .title h1 {
-  text-align: center;
-  background-image: linear-gradient(to right, rgb(236, 188, 99), rgb(247, 247, 120), rgb(180, 252, 122), rgb(236, 188, 99));
-  animation: rainbow-animation 20s linear infinite;
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-body .container .intro {
+  height: 48px;
   display: flex;
-  flex-direction: column;
-  gap: 25px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3f3f41;
+  padding: 0 20px;
 }
-body .container .intro .text {
-  display: flex;
-}
-body .container .intro .text p {
-  margin: 0;
-  width: 50%;
-}
-body .container .intro .text:nth-child(2) {
-  justify-content: flex-end;
-}
-body .container .intro .text:nth-child(2) p {
-  text-align: right;
-}
-body .container .goblin {
-  text-align: center;
-}
-body .container .pics-parent {
-  display: flex;
-  justify-content: center;
-}
-body .container .pics {
-  overflow: auto;
+nav .section {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  gap: 20px;
 }
-body .container .pics img {
-  height: 200px;
-  width: auto;
+nav .section .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@media (max-width: 263.5px) {
-  body .container .first {
-    margin-top: 95px;
-  }
+.section1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  height: 569px;
+  gap: 20px;
+  position: relative;
 }
-@media (max-width: 600px) {
-  body .container .intro .text p {
-    width: 80%;
-  }
+.section1 h2,
+.section1 h3 {
+  text-align: center;
+}
+.section1 h2 {
+  margin-top: 35px;
+  margin-bottom: 5px;
+}
+.section1 h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.section1 .bottom {
+  display: inline-flex;
+}
+.section1 .links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+}
+.section1 .links a:after {
+  content: " >";
+}
+.section1 .links a:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */
