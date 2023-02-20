@@ -83,6 +83,21 @@ nav .section .item {
   justify-content: center;
 }
 
+.learn-more-buy {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+}
+.learn-more-buy a:after {
+  content: " >";
+}
+.learn-more-buy a:hover {
+  text-decoration: underline;
+}
+
 .section1 {
   display: flex;
   align-items: center;
@@ -90,7 +105,7 @@ nav .section .item {
   flex-direction: column;
   background-color: black;
   color: white;
-  height: 569px;
+  height: 500px;
   gap: 20px;
   position: relative;
 }
@@ -109,17 +124,15 @@ nav .section .item {
 .section1 .bottom {
   display: inline-flex;
 }
-.section1 .links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  font-weight: 400;
-  font-size: 17px;
-  line-height: 21px;
+
+.section2 {
+  text-align: center;
 }
-.section1 .links a:after {
-  content: " >";
+.section2 h2 {
+  margin-top: 50px;
+  margin-bottom: 0;
 }
-.section1 .links a:hover {
-  text-decoration: underline;
+.section2 h3 {
+  margin-top: 5px;
+  margin-bottom: 10px;
 }/*# sourceMappingURL=style.css.map */
