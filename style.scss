@@ -1,129 +1,146 @@
 @font-face {
-  font-family: "Ubuntu";
-  src: url("/assets/Ubuntu-R.ttf");
+    font-family: "Libre Bodoni";
+    src: url("/assets/fonts/LibreBodoni-VariableFont_wght.ttf");
 }
 
-@font-face {
-  font-family: "LibreBodoni";
-  src: url("/assets/LibreBodoni-Regular.ttf");
-}
-
-html,
 body {
-  margin: 0;
-  padding: 0;
+    background: linear-gradient(
+        145deg,
+        rgb(10, 10, 10) 0%,
+        rgb(30, 31, 82) 150%
+    );
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    margin: 0;
+    font-family: "Libre Bodoni";
+}
+
+h1,
+p {
+    margin: 0;
 }
 
 a {
-  color: rgb(236, 255, 150);
-  text-decoration: underline;
+    color: unset;
 }
 
-@keyframes rainbow-animation {
-  to {
-    background-position: 200vw;
-  }
-}
+header {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
 
-body {
-  background: linear-gradient(to bottom, rgb(43, 40, 40), rgb(0, 0, 0));
-
-  color: white;
-  font-family: "LibreBodoni";
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  h1,
-  h2 {
-    margin: 20px;
-  }
-
-  .container {
-    width: calc(100% - 40px);
-    max-width: 600px;
-    margin: 20px;
-
-    .title {
-      h1 {
-        text-align: center;
-        background-image: linear-gradient(
-          to right,
-          rgb(236, 188, 99),
-          rgb(247, 247, 120),
-          rgb(180, 252, 122),
-          rgb(236, 188, 99)
-        );
-        animation: rainbow-animation 20s linear infinite;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
+    .text {
+        display: inline-block;
+        width: 220px;
     }
 
-    .intro {
-      display: flex;
-      flex-direction: column;
-      gap: 25px;
+    h1 {
+        text-transform: uppercase;
+        text-align: right;
 
-      .text {
+        span {
+            position: relative;
+            z-index: 3;
+        }
+    }
+
+    .image {
+        width: 70px;
         display: flex;
+        justify-content: flex-end;
+        z-index: 2;
 
-        p {
-          margin: 0;
-          width: 50%;
+        img {
+            transform: translateY(-10px);
         }
-
-        &:nth-child(2) {
-          justify-content: flex-end;
-
-          p {
-            text-align: right;
-          }
-        }
-      }
     }
-
-    .goblin {
-      text-align: center;
-    }
-
-    .pics-parent {
-      display: flex;
-      justify-content: center;
-    }
-
-    .pics {
-      overflow: auto;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-
-      img {
-        height: 200px;
-        width: auto;
-      }
-    }
-  }
 }
 
-@media (max-width: 263.5px) {
-  body {
-    .container {
-      .first {
-        margin-top: 95px;
-      }
+.quote {
+    width: 100%;
+    display: grid;
+    place-items: center;
+
+    p {
+        text-align: center;
+        max-width: 200px;
+        font-size: 18px;
     }
-  }
 }
 
-@media (max-width: 600px) {
-  body {
-    .container {
-      .intro {
-        .text p {
-          width: 80%;
+.phrase {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+
+    .image {
+        width: 100px;
+
+        img {
+            z-index: 1;
+            transform: translateY(-1px);
         }
-      }
     }
-  }
+
+    .text {
+        span {
+            position: relative;
+        }
+
+        line-height: 45px;
+        display: flex;
+        align-items: flex-end;
+
+        .hide,
+        .your {
+            z-index: -1;
+        }
+
+        .moms {
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 52px;
+        }
+    }
+
+    &:nth-child(even) {
+        text-align: right;
+
+        .party {
+            z-index: 2;
+        }
+
+        .image {
+            display: flex;
+            justify-content: flex-end;
+            width: 80px;
+
+            img {
+                transform: translateY(-7px);
+            }
+        }
+    }
+}
+
+.batman {
+    display: grid;
+    place-items: center;
+    margin-bottom: 20px;
+}
+
+.story {
+    text-align: center;
+    margin: 40px 0;
+}
+
+footer {
+    display: grid;
+    place-items: center;
+    height: 80px;
 }
