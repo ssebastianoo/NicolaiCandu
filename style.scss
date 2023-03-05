@@ -7,7 +7,7 @@ body {
     background: linear-gradient(
         145deg,
         rgb(10, 10, 10) 0%,
-        rgb(30, 31, 82) 150%
+        rgb(17, 17, 39) 150%
     );
     background-size: cover;
     background-repeat: no-repeat;
@@ -26,37 +26,49 @@ a {
 }
 
 header {
-    font-size: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 200px;
+    display: grid;
+    place-items: center;
 
-    .text {
-        display: inline-block;
-        width: 220px;
-    }
-
-    h1 {
-        text-transform: uppercase;
-        text-align: right;
-
-        span {
-            position: relative;
-            z-index: 3;
-        }
-    }
-
-    .image {
-        width: 70px;
+    a {
+        text-decoration: none;
+        font-size: 25px;
         display: flex;
-        justify-content: flex-end;
-        z-index: 2;
+        justify-content: center;
+        align-items: center;
 
-        img {
-            transform: translateY(-10px);
+        .text {
+            display: inline-block;
+            width: 220px;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            text-align: right;
+            text-shadow: 0 0 5px black;
+
+            span {
+                position: relative;
+                z-index: 3;
+            }
+        }
+
+        .image {
+            width: 70px;
+            display: flex;
+            justify-content: flex-end;
+            z-index: 2;
+
+            img {
+                transform: translateY(-10px);
+                filter: drop-shadow(0 0 5px black);
+            }
         }
     }
+}
+
+main {
+    min-height: calc(100vh - 280px);
 }
 
 .quote {
@@ -83,6 +95,7 @@ header {
         img {
             z-index: 1;
             transform: translateY(-1px);
+            filter: drop-shadow(0 0 5px black);
         }
     }
 
@@ -106,6 +119,7 @@ header {
 
         h1 {
             font-size: 52px;
+            text-shadow: 0 0 5px black;
         }
     }
 
@@ -134,7 +148,7 @@ header {
     margin-bottom: 20px;
 }
 
-.story {
+.discover {
     text-align: center;
     margin: 40px 0;
 }
@@ -143,4 +157,44 @@ footer {
     display: grid;
     place-items: center;
     height: 80px;
+}
+
+.story {
+    padding: 0 30px;
+
+    .text {
+        display: flex;
+        width: 100%;
+
+        p {
+            max-width: 250px;
+        }
+
+        &:nth-child(even) {
+            text-align: right;
+            justify-content: flex-end;
+        }
+
+        &:not(:first-child) {
+            margin-top: 20px;
+        }
+    }
+
+    .goblin {
+        text-transform: uppercase;
+        text-align: center;
+        margin: 20px 0;
+    }
+}
+
+.pics-parent {
+    display: grid;
+    place-items: center;
+}
+
+.pics {
+    display: flex;
+    gap: 2px;
+    overflow: auto;
+    margin: 20px 0;
 }
