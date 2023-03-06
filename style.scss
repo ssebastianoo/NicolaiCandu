@@ -221,8 +221,14 @@ footer {
     height: 80px;
 }
 
+.story-parent {
+    display: grid;
+    place-items: center;
+}
+
 .story {
     padding: 0 30px;
+    max-width: 400px;
 
     .text {
         display: flex;

@@ -175,8 +175,14 @@ footer {
   height: 80px;
 }
 
+.story-parent {
+  display: grid;
+  place-items: center;
+}
+
 .story {
   padding: 0 30px;
+  max-width: 400px;
 }
 .story .text {
   display: flex;
