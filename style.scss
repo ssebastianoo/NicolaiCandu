@@ -222,25 +222,29 @@ footer {
 }
 
 .story-parent {
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .story {
-    padding: 0 30px;
-    max-width: 400px;
+    padding: 30px 30px 0;
+    width: calc(100% - 60px);
+    max-width: 500px;
 
     .text {
         display: flex;
-        width: 100%;
 
         p {
-            max-width: 250px;
+            max-width: 200px;
         }
 
         &:nth-child(even) {
-            text-align: right;
             justify-content: flex-end;
+
+            p {
+                text-align: right;
+            }
         }
 
         &:not(:first-child) {
@@ -249,20 +253,23 @@ footer {
     }
 
     .goblin {
-        text-transform: uppercase;
+        margin-top: 20px;
         text-align: center;
+    }
+
+    .pics-parent {
+        display: flex;
+        justify-content: center;
+    }
+
+    .pics {
+        display: flex;
+        overflow: auto;
+        gap: 5px;
         margin: 20px 0;
     }
-}
 
-.pics-parent {
-    display: grid;
-    place-items: center;
-}
-
-.pics {
-    display: flex;
-    gap: 2px;
-    overflow: auto;
-    margin: 20px 0;
+    .description {
+        text-align: center;
+    }
 }

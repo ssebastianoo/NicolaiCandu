@@ -176,42 +176,45 @@ footer {
 }
 
 .story-parent {
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .story {
-  padding: 0 30px;
-  max-width: 400px;
+  padding: 30px 30px 0;
+  width: calc(100% - 60px);
+  max-width: 500px;
 }
 .story .text {
   display: flex;
-  width: 100%;
 }
 .story .text p {
-  max-width: 250px;
+  max-width: 200px;
 }
 .story .text:nth-child(even) {
-  text-align: right;
   justify-content: flex-end;
+}
+.story .text:nth-child(even) p {
+  text-align: right;
 }
 .story .text:not(:first-child) {
   margin-top: 20px;
 }
 .story .goblin {
-  text-transform: uppercase;
+  margin-top: 20px;
   text-align: center;
-  margin: 20px 0;
 }
-
-.pics-parent {
-  display: grid;
-  place-items: center;
-}
-
-.pics {
+.story .pics-parent {
   display: flex;
-  gap: 2px;
+  justify-content: center;
+}
+.story .pics {
+  display: flex;
   overflow: auto;
+  gap: 5px;
   margin: 20px 0;
+}
+.story .description {
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
