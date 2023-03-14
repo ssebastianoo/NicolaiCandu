@@ -273,3 +273,12 @@ footer {
         text-align: center;
     }
 }
+
+.notfound {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 280px);
+}
