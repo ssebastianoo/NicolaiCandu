@@ -102,6 +102,9 @@ main {
   display: flex;
   align-items: flex-end;
 }
+.phrase .text h2 {
+  font-size: 52px;
+}
 .phrase .text span {
   position: relative;
 }
