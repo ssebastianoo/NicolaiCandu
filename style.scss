@@ -136,9 +136,10 @@ main {
             z-index: 2;
         }
 
-        h1 {
+        h2 {
             font-size: 52px;
             text-shadow: 0 0 5px black;
+            margin: 0;
         }
     }
 
@@ -148,7 +149,7 @@ main {
         transform: translateX(100%);
     }
 
-    &:nth-child(even) {
+    &:nth-child(2) {
         text-align: right;
         transform: translateX(-100%);
         animation: slide-in 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.3s
@@ -165,6 +166,34 @@ main {
 
             img {
                 transform: translateY(-7px);
+            }
+        }
+    }
+
+    &:nth-child(3) {
+        margin-top: 20px;
+
+        .image {
+            width: 170px;
+        }
+
+        .text {
+            padding-top: 20px;
+            align-items: center;
+
+            h2 {
+                font-size: 35px;
+                line-height: 32px;
+            }
+
+            .man,
+            .you,
+            .needed {
+                z-index: -1;
+            }
+
+            .needed {
+                margin-left: 27px;
             }
         }
     }
@@ -285,4 +314,29 @@ footer {
     justify-content: center;
     align-items: center;
     min-height: calc(100vh - 280px);
+}
+
+@media (max-width: 450px) {
+    .phrase {
+        &:nth-child(3) {
+            .image {
+                width: 120px;
+
+                img {
+                    height: 140px;
+                }
+            }
+
+            .text {
+                h2 {
+                    font-size: 30px;
+                    line-height: 27px;
+                }
+
+                .you {
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
 }

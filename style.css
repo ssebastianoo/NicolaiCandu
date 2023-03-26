@@ -115,29 +115,52 @@ main {
 .phrase .text .moms {
   z-index: 2;
 }
-.phrase .text h1 {
+.phrase .text h2 {
   font-size: 52px;
   text-shadow: 0 0 5px black;
+  margin: 0;
 }
 .phrase:nth-child(odd) {
   animation: slide-in 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.2s forwards;
   transform: translateX(100%);
 }
-.phrase:nth-child(even) {
+.phrase:nth-child(2) {
   text-align: right;
   transform: translateX(-100%);
   animation: slide-in 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.3s forwards;
 }
-.phrase:nth-child(even) .party {
+.phrase:nth-child(2) .party {
   z-index: 2;
 }
-.phrase:nth-child(even) .image {
+.phrase:nth-child(2) .image {
   display: flex;
   justify-content: flex-end;
   width: 80px;
 }
-.phrase:nth-child(even) .image img {
+.phrase:nth-child(2) .image img {
   transform: translateY(-7px);
+}
+.phrase:nth-child(3) {
+  margin-top: 20px;
+}
+.phrase:nth-child(3) .image {
+  width: 170px;
+}
+.phrase:nth-child(3) .text {
+  padding-top: 20px;
+  align-items: center;
+}
+.phrase:nth-child(3) .text h2 {
+  font-size: 35px;
+  line-height: 32px;
+}
+.phrase:nth-child(3) .text .man,
+.phrase:nth-child(3) .text .you,
+.phrase:nth-child(3) .text .needed {
+  z-index: -1;
+}
+.phrase:nth-child(3) .text .needed {
+  margin-left: 27px;
 }
 
 .batman {
@@ -229,4 +252,20 @@ footer {
   justify-content: center;
   align-items: center;
   min-height: calc(100vh - 280px);
+}
+
+@media (max-width: 450px) {
+  .phrase:nth-child(3) .image {
+    width: 120px;
+  }
+  .phrase:nth-child(3) .image img {
+    height: 140px;
+  }
+  .phrase:nth-child(3) .text h2 {
+    font-size: 30px;
+    line-height: 27px;
+  }
+  .phrase:nth-child(3) .text .you {
+    margin-left: 8px;
+  }
 }/*# sourceMappingURL=style.css.map */
