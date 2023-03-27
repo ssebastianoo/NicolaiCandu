@@ -154,7 +154,7 @@ main {
   font-size: 35px;
   line-height: 32px;
 }
-.phrase:nth-child(3) .text .man,
+.phrase:nth-child(3) .text .hero,
 .phrase:nth-child(3) .text .you,
 .phrase:nth-child(3) .text .needed {
   z-index: -1;
