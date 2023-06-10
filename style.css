@@ -72,6 +72,27 @@ main {
   min-height: calc(100vh - 280px);
 }
 
+.pink-glasses {
+  display: flex;
+  justify-content: center;
+  transform: translateY(-10px);
+}
+
+.yt {
+  display: flex;
+  justify-content: center;
+}
+.yt iframe {
+  width: 85%;
+  max-width: 600px;
+  height: 337.5px;
+}
+
+@media (max-width: 600px) {
+  .yt iframe {
+    height: 200px;
+  }
+}
 .quote {
   width: 100%;
   display: grid;
